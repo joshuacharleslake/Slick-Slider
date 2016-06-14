@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    #main-slider { width: 100%; max-height: 300px; overflow: hidden; }
+    .slick-slide { position: relative; }
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+    .slick-prev { left: 2%; z-index: 999;}
+    .slick-next { right: 2%; z-index: 999;}
+    .slick-dots { bottom: 5px;}
+
+    .slider-content { width: 33%; background: #1b1b1b;}
+  </style>
+</head>
+<body>
+<div style="height:100px;"></div>
+  <section id="main-slider">
+    <div>
+      <img src="http://www.flowcrete.co.uk/media/2705/car-parks-01.jpg">
+    </div>
+    <div>
+      <img src="http://www.flowcrete.co.uk/media/2705/car-parks-01.jpg">
+    </div>
+    
+  </section>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $("#main-slider").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1000,
+        fade: true,
+      });
+    });
+  </script>
+
+</body>
+</html>
